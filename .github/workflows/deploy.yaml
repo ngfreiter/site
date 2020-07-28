@@ -15,14 +15,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Install Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      
-      - name: Link Node
-        run: sudo node --version
-
       - name: Install docsy prerequisites
         run: npm install postcss-cli autoprefixer
 
