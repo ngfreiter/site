@@ -19,3 +19,5 @@ jobs:
         env:
           HUGO_VERSION: 0.74.3
           HUGO_EXTENDED: true
+          TARGET_REPO: ngfreiter/test-fshschool-site.github.io
+          TOKEN: ${{ secrets.TOKEN }}
