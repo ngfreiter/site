@@ -21,7 +21,7 @@ jobs:
           node-version: 12.x
       
       - name: Link Node
-        run: sudo ln -s /usr/bin/nodejs /usr/bin/node
+        run: sudo ls /usr/bin
 
       - name: Install docsy prerequisites
         run: npm install postcss-cli autoprefixer
