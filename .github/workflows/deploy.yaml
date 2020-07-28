@@ -21,7 +21,8 @@ jobs:
           node-version: 14.x
       
       - name: Link Node
-        run: /usr/bin/env node
+        run: sudo PATH=/usr/bin/node:$PATH
+
 
       - name: Install docsy prerequisites
         run: npm install
