@@ -1,5 +1,7 @@
 /public
-resources/
+/resources
+/node_modules
+/package-lock.json
 
 # Editors
 .vscode
@@ -9,5 +11,3 @@ resources/
 # OS metadata
 .DS_Store
 Thumbs.db
-
-node_modules/
