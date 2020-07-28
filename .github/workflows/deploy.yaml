@@ -35,3 +35,4 @@ jobs:
           TARGET_REPO: ngfreiter/fsh-school-test.github.io
           TOKEN: ${{ secrets.TOKEN }}
           CNAME: fshschool.org
+          HUGO_ARGS: -v
