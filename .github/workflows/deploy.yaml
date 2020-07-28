@@ -19,12 +19,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      
-      - name: Link Node
-        run: sudo ls /usr/bin/env
-
-      - name: Install docsy prerequisites
-        run: npm install postcss-cli autoprefixer
 
       - name: Hugo Deploy GitHub Pages
         uses: benmatselby/hugo-deploy-gh-pages@master
