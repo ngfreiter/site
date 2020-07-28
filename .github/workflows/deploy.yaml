@@ -19,6 +19,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      
+      - name: Link Node
+        run: ln -s /usr/bin/nodejs /usr/bin/node
 
       - name: Install docsy prerequisites
         run: npm install postcss-cli autoprefixer
