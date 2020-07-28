@@ -24,7 +24,7 @@ jobs:
         run: /usr/bin/env node
 
       - name: Install docsy prerequisites
-        run: npm install postcss-cli autoprefixer && npm audit fix
+        run: npm install
 
       - name: Hugo Deploy GitHub Pages
         uses: benmatselby/hugo-deploy-gh-pages@master
