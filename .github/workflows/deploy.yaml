@@ -21,7 +21,7 @@ jobs:
           node-version: 12.18.3
       
       - name: Link Node
-        run: "ln -s /opt/hostedtoolcache/node/12.18.3/x64/bin/nodejs /opt/hostedtoolcache/node/12.18.3/x64/bin/node
+        run: "sudo ln -s /opt/hostedtoolcache/node/12.18.3/x64/bin/nodejs /opt/hostedtoolcache/node/12.18.3/x64/bin/node"
 
 
       - name: Install docsy prerequisites
