@@ -19,20 +19,21 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.18.3
-      
-      - name: Link Node
-        run: "sudo ln -s /opt/hostedtoolcache/node/12.18.3/x64/bin/nodejs /opt/hostedtoolcache/node/12.18.3/x64/bin/node"
-
 
       - name: Install docsy prerequisites
         run: npm install
 
-      - name: Hugo Deploy GitHub Pages
-        uses: benmatselby/hugo-deploy-gh-pages@master
-        env:
-          HUGO_VERSION: 0.74.3
-          HUGO_EXTENDED: true
-          TARGET_REPO: ngfreiter/fsh-school-test.github.io
-          TOKEN: ${{ secrets.TOKEN }}
-          CNAME: fshschool.org
-          HUGO_ARGS: -v
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.74.3'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: ngfreiter/test-fshschool-site.github.io
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          publish_dir: ./public
